@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #c5a8dc;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.expense-container {
+  width: 370px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 24px 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* Heading */
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 42px;
+  color: #000;
+}
+
+/* Balance */
+
+.balance-section {
+  margin-bottom: 26px;
+}
+
+.balance-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.balance-section h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/* Summary */
+
+.summary {
+  height: 80px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-bottom: 46px;
+}
+
+.summary-box {
+  width: 50%;
+  text-align: center;
+}
+
+.summary-box h3 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.summary-box p {
+  font-size: 24px;
+}
+
+.income {
+  color: #50c878;
+}
+
+.expense {
+  color: #ff5757;
+}
+
+.divider {
+  height: 45px;
+  width: 1px;
+  background: #dddddd;
+}
+
+/* Section */
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.line {
+  height: 2px;
+  background: #e0c9ed;
+  margin-bottom: 23px;
+}
+
+/* History */
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.transaction {
+  position: relative;
+
+  height: 52px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+  font-size: 16px;
+
+  overflow: hidden;
+}
+
+.transaction-income {
+  border-right: 7px solid #4bd35d;
+}
+
+.transaction-expense {
+  border-right: 7px solid #ff5757;
+}
+
+/* Delete button */
+
+.delete-btn {
+  position: absolute;
+  right: 5px;
+
+  width: 20px;
+  height: 20px;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.transaction:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Add section */
+
+.add-section {
+  margin-top: 47px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  height: 28px;
+
+  border: 1px solid #d8c5df;
+  border-radius: 6px;
+
+  padding: 5px 8px;
+
+  font-size: 13px;
+
+  margin-bottom: 11px;
+
+  outline: none;
+}
+
+.form input[type="text"]:focus,
+.form input[type="number"]:focus {
+  border-color: #9560c7;
+}
+
+/* Radio buttons */
+
+.radio-group {
+  margin-top: 5px;
+  margin-bottom: 17px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.radio-label input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+/* Add button */
+
+.add-button {
+  height: 30px;
+
+  background: #965bc7;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  background: #8146b2;
+}
+
+.add-button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile */
+
+@media (max-width: 450px) {
+  .app {
+    padding: 15px;
+  }
+
+  .expense-container {
+    width: 100%;
+  }
+}
